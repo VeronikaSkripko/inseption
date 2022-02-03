@@ -1,0 +1,32 @@
+#connect directory to a virtual machine
+sshfs schaya-ad@192.168.64.2: /Users/nika_skripko/Desktop/virt-deb
+
+#disconnect directory
+umount -f /Users/nika_skripko/Desktop/virt-deb 
+
+#connect terminal to a virtual machine
+ssh schaya-ad@192.168.64.2
+
+#зайти в баш контейнера
+docker exec -it nginx bash
+
+https://schaya.42.fr/
+https://schaya.42.fr/wp-admin
+
+#wordpress admin/user
+schaya //890
+user //111
+
+#mysql root
+mysql -u root //fail
+mysql -u root -p // 123
+
+#mysql user
+mysql -u schaya -p // 890
+
+#show that databases work
+show databases;
+use wordpress;
+show tables;
+select * from wp_comments;
+
